@@ -1,12 +1,27 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+@import 'config/fonts';
+@import 'config/colors';
+
+nav {
+  background-color: $wes-red;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-brand {
+  font-family: $headings-font-family;
+  color: $yellow;
+
+  &:hover {
+    color: $yellow;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+body {
+  padding-top: 4rem;
 }
