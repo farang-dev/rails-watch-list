@@ -1,0 +1,26 @@
+@import 'config/fonts';
+
+.card-category {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category a {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: $headings-font-family;
+  color: white;
+  font-size: 20px;
+}
