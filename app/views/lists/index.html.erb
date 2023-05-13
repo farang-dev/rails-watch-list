@@ -5,6 +5,9 @@
       <div class="col-md-6 mb-3">
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.KHmszFTBsi-R-X19ZQrkPwHaEo%26pid%3DApi&f=1&ipt=8fa8135ce14e1847c977d96563b2cb4f93d50cf7cd36a02eec12345b6df98751&ipo=images'%>)">
           <%= link_to list.name.capitalize, list_path(list), class: "link-text" %>
+          <%= link_to list_path(list), data: { turbo_method: :delete, turbo_confirm: "Delete #{list.name}?"} do %>
+          <p class="delete-icon">✂︎</p>
+          <% end %>
         </div>
       </div>
     <% end %>
@@ -13,5 +16,4 @@
   <br>
 
   <%= link_to "Add a List", new_list_path, class: "btn btn-primary mb-4" %>
-
 </div>
